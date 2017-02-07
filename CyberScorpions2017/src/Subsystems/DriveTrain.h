@@ -16,6 +16,10 @@ public:
 	DriveTrain();
 	void InitDefaultCommand();
 	void Drive(double acceleration, double steering, double sensitiviy);
+	void DriveByTime(double left, double right, double ms);
+	void DriveByDistance(double forward, double left);
+	void TurnTo(double orientation);
+	void DriveToPoint(Position position);
 };
 
 #endif  // DriveTrain_H

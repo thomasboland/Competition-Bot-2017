@@ -19,3 +19,19 @@ void DriveTrain::InitDefaultCommand() {
 void DriveTrain::Drive(double acceleration, double steering, double sensitivity) {
 
 }
+
+void DriveTrain::DriveByTime(double left, double right, double ms) {
+
+}
+
+void DriveTrain::DriveByDistance(double forward, double left) {
+
+}
+
+void DriveTrain::TurnTo(double orientation) {
+
+}
+
+void DriveTrain::DriveToPoint(Position position) {
+
+}
