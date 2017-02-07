@@ -1,17 +1,14 @@
-#include "ExampleSubsystem.h"
-
+#include "Vision.h"
 #include "../RobotMap.h"
 
-ExampleSubsystem::ExampleSubsystem() :
-		frc::Subsystem("ExampleSubsystem") {
+Vision::Vision() : Subsystem("Vision") {
 
 }
 
-void ExampleSubsystem::InitDefaultCommand() {
+void Vision::InitDefaultCommand() {
 	// Set the default command for a subsystem here.
 	// SetDefaultCommand(new MySpecialCommand());
 }
 
 // Put methods for controlling this subsystem
 // here. Call these from Commands.
-

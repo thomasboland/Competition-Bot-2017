@@ -18,4 +18,13 @@
 // constexpr int RANGE_FINDER_PORT = 1;
 // constexpr int RANGE_FINDER_MODULE = 1;
 
+constexpr int DRIVE_MOTOR_CONTROLLER_LF_PORT = 0;
+constexpr int DRIVE_MOTOR_CONTROLLER_LR_PORT = 1;
+constexpr int DRIVE_MOTOR_CONTROLLER_RF_PORT = 2;
+constexpr int DRIVE_MOTOR_CONTROLLER_RR_PORT = 3;
+
+constexpr int GEAR_PLACEMENT_SERVO_PORT = 4;
+
+constexpr int WINCH_MOTOR_CONTROLLER_PORT = 5;
+
 #endif  // ROBOTMAP_H
