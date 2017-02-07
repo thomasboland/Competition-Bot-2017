@@ -7,15 +7,21 @@
 #include <SmartDashboard/SendableChooser.h>
 #include <SmartDashboard/SmartDashboard.h>
 
-#include "Commands/ExampleCommand.h"
 #include "CommandBase.h"
+
+#include "Models/Position.h"
 
 class Robot: public frc::IterativeRobot {
 public:
+
+	Position currentPosition = new Position(0.0, 0.0, 0.0);
+	Position startPosition = new Position(0.0, 0.0, 0.0);
+
 	void RobotInit() override {
-		chooser.AddDefault("Default Auto", new ExampleCommand());
 		// chooser.AddObject("My Auto", new MyAutoCommand());
 		frc::SmartDashboard::PutData("Auto Modes", &chooser);
+
+		autonomousCommand = new AutonomousCommand();
 	}
 
 	/**
@@ -51,11 +57,7 @@ public:
 			autonomousCommand.reset(new ExampleCommand());
 		} */
 
-		autonomousCommand.reset(chooser.GetSelected());
-
-		if (autonomousCommand.get() != nullptr) {
-			autonomousCommand->Start();
-		}
+		autonomousCommand->Start();
 	}
 
 	void AutonomousPeriodic() override {
@@ -74,10 +76,6 @@ public:
 
 	void TeleopPeriodic() override {
 		frc::Scheduler::GetInstance()->Run();
-	}
-
-	void TestPeriodic() override {
-		frc::LiveWindow::GetInstance()->Run();
 	}
 
 private:

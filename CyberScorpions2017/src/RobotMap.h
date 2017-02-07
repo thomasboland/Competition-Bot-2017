@@ -18,13 +18,26 @@
 // constexpr int RANGE_FINDER_PORT = 1;
 // constexpr int RANGE_FINDER_MODULE = 1;
 
-constexpr int DRIVE_MOTOR_CONTROLLER_LF_PORT = 0;
+// Subsystem: DriveTrain
+constexpr int DRIVE_MOTOR_CONTROLLER_LF_PORT = 0; // PWM output
 constexpr int DRIVE_MOTOR_CONTROLLER_LR_PORT = 1;
 constexpr int DRIVE_MOTOR_CONTROLLER_RF_PORT = 2;
 constexpr int DRIVE_MOTOR_CONTROLLER_RR_PORT = 3;
+constexpr int DRIVE_ENCODER_L_PORT = -1; // ??
+constexpr int DRIVE_ENCODER_R_PORT = -1;
 
-constexpr int GEAR_PLACEMENT_SERVO_PORT = 4;
+// Subsystem: GearSleeve
+constexpr int GEAR_PLACEMENT_SERVO_PORT = 4; // PWM output
+constexpr int GEAR_POSITION_SENSOR = 0; // Analog input
 
-constexpr int WINCH_MOTOR_CONTROLLER_PORT = 5;
+// Subsystem: Winch
+constexpr int WINCH_MOTOR_CONTROLLER_PORT = 5; // PWM output
+
+// Subsystem: Vision
+constexpr int CAMERA_FRONT_PORT = 0; // USB Camera ID
+constexpr int CAMERA_DRIVE_PORT = 1;
+constexpr int CAMERA_FRONT_LIGHT_PORT = 0; // Digital
+constexpr int CAMERA_DRIVE_SERVO_PORT = 6; // PWM output
+
 
 #endif  // ROBOTMAP_H
