@@ -16,6 +16,8 @@ public:
 	void RobotInit() override {
 		// chooser.AddObject("My Auto", new MyAutoCommand());
 		frc::SmartDashboard::PutData("Auto Modes", &chooser);
+
+		autonomousCommand = new AutonomousCommand();
 	}
 
 	/**
@@ -51,11 +53,7 @@ public:
 			autonomousCommand.reset(new ExampleCommand());
 		} */
 
-		autonomousCommand.reset(chooser.GetSelected());
-
-		if (autonomousCommand.get() != nullptr) {
-			autonomousCommand->Start();
-		}
+		autonomousCommand->Start();
 	}
 
 	void AutonomousPeriodic() override {
