@@ -17,4 +17,8 @@ AutonomousCommand::AutonomousCommand() {
 	// e.g. if Command1 requires chassis, and Command2 requires arm,
 	// a CommandGroup containing them would require both the chassis and the
 	// arm.
+
+	AddSequential(new CompleteDriveToNearestLift());
+	AddSequential(new PlaceGear());
+	AddSequential(new DriveToPoint(new Position(0.0, 0.0, 0.0)));
 }

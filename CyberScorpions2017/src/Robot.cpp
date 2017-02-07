@@ -13,6 +13,10 @@
 
 class Robot: public frc::IterativeRobot {
 public:
+
+	Position currentPosition = new Position(0.0, 0.0, 0.0);
+	Position startPosition = new Position(0.0, 0.0, 0.0);
+
 	void RobotInit() override {
 		// chooser.AddObject("My Auto", new MyAutoCommand());
 		frc::SmartDashboard::PutData("Auto Modes", &chooser);
@@ -72,10 +76,6 @@ public:
 
 	void TeleopPeriodic() override {
 		frc::Scheduler::GetInstance()->Run();
-	}
-
-	void TestPeriodic() override {
-		frc::LiveWindow::GetInstance()->Run();
 	}
 
 private:
