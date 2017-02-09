@@ -10,6 +10,8 @@
 #include "CommandBase.h"
 
 #include "Models/Position.h"
+#include "Models/Arena.h"
+#include "Models/ArenaCell.h"
 
 class Robot: public frc::IterativeRobot {
 public:
