@@ -13,6 +13,9 @@ private:
 	std::map<std::string,ArenaCell> cells;
 public:
 	Arena();
+	std::string GetCell(Position pos);
+	Position GetCellTarget(std::string cell);
+	std::string GetTag(std::string cell, std::string tag);
 };
 
 #endif /* SRC_MODELS_ARENA_H_ */

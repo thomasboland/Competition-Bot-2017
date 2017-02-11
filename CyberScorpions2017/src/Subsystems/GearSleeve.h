@@ -2,7 +2,7 @@
 #define GearSleeve_H
 
 #include <Commands/Subsystem.h>
-#include "WPILib.h";
+#include "WPILib.h"
 
 class GearSleeve : public Subsystem {
 private:
