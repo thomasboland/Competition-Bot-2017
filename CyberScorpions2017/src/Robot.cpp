@@ -18,6 +18,7 @@ public:
 
 	Position currentPosition = new Position(0.0, 0.0, 0.0);
 	Position startPosition = new Position(0.0, 0.0, 0.0);
+	Arena arena = new Arena();
 
 	void RobotInit() override {
 		autonomousCommand = new AutonomousCommand();
