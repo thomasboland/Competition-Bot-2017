@@ -4,8 +4,12 @@
 #include "../CommandBase.h"
 
 class DriveWithJoystick : public CommandBase {
-public:
-	DriveWithJoystick();
+RobotDrive myRobot;
+Joystick stick;
+	public:
+	DriveWithJoystick():
+	myRobot(0,1,2,3),
+	stick(0);
 	void Initialize();
 	void Execute();
 	bool IsFinished();
