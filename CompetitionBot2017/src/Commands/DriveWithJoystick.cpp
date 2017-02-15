@@ -14,8 +14,8 @@ void DriveWithJoystick::Initialize() {
 // Called repeatedly when this Command is scheduled to run
 void DriveWithJoystick::Execute() {
 	Joystick* stick = oi->GetJoystick();
-	double sensitivity = -(stick->GetRawAxis(3)+1)/2;
-	drivetrain->Drive(stick->GetRawAxis(1)*sensitivity, stick->GetRawAxis(0)*sensitivity);
+	double sensitivity = (stick->GetRawAxis(3)+1)/2;
+	drivetrain->Drive(-stick->GetRawAxis(1)*sensitivity, -stick->GetRawAxis(0)*sensitivity);
 }
 
 // Make this return true when this Command no longer needs to run execute()

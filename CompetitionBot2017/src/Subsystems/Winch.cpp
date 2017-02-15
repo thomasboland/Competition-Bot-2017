@@ -15,5 +15,5 @@ void Winch::SetMotorPower(double power) {
 		winchMotor = new VictorSP(5);
 		definedYet = true;
 	}
-	winchMotor->Set(power);
+	winchMotor->Set(-power);
 }
