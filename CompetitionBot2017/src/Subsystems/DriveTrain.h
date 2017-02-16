@@ -11,6 +11,8 @@ private:
 	// for methods that implement subsystem capabilities
 	bool definedYet;
 	RobotDrive* driveBase;
+	Encoder* leftEncoder;
+	Encoder* rightEncoder;
 public:
 	DriveTrain();
 	void InitDefaultCommand();
